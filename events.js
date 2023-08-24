@@ -36,3 +36,21 @@ greenButton.addEventListener('click',function makeGreen(){
 document.getElementById('make-goldenrod').addEventListener('click',function(){
   document.body.style.backgroundColor='goldenrod';  
 })
+// Most common way set events handlers and option 1
+function handleOnClick(){
+    const handlerStatus=document.getElementById('handler-status');
+    handlerStatus.innerText='Handled by function atached on onclick attribute';
+}
+// Option 2 
+document.getElementById('event-listener').addEventListener('click',function(){
+    const handlerStatus=document.getElementById('handler-status');
+    handlerStatus.innerText='Text updated by add event listhener button.'
+})
+// option 2 recap 
+document.getElementById('btn-update').addEventListener('click',function(){
+    const inputField=document.getElementById('input-field');
+    const inputText=inputField.value;
+    const p = document.getElementById('input-text-display');
+    p.innerText=inputText;
+    inputField.value='';
+})
